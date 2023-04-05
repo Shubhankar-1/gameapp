@@ -97,7 +97,7 @@ public class KenPlayer extends Player {
 
 	@Override
 	public BufferedImage defaultImage() {
-		BufferedImage subImage = image.getSubimage(1756, 685, 62, 94);
+		// BufferedImage subImage = image.getSubimage(1756, 685, 62, 94);
 		// return subImage;
 		if (currentMove == KICK) {
 			return printKick();

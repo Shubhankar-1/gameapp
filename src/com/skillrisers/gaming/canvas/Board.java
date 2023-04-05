@@ -32,6 +32,7 @@ public class Board extends JPanel implements GameConstants {
 			public void actionPerformed(ActionEvent e) {
 				repaint();
 				ryuPlayer.fall();
+				kenPlayer.fall();
 				
 			}
 		});
@@ -64,7 +65,7 @@ public class Board extends JPanel implements GameConstants {
 			
 			@Override
 			public void keyPressed(KeyEvent e) {
-				if(e.getKeyCode() == KeyEvent.VK_LEFT) {
+				if(e.getKeyCode() == KeyEvent.VK_A) {
 					ryuPlayer.setSpeed(-SPEED);
 					ryuPlayer.move();
 					//repaint();
@@ -72,7 +73,7 @@ public class Board extends JPanel implements GameConstants {
 				else if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 					ryuPlayer.jump();
 				}
-				else if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
+				else if(e.getKeyCode() == KeyEvent.VK_D) {
 					ryuPlayer.setSpeed(SPEED);
 					ryuPlayer.move();
 					//repaint();
@@ -86,15 +87,25 @@ public class Board extends JPanel implements GameConstants {
 					ryuPlayer.setCurrentMove(PUNCH);
 				}
 				// Ken 
-				else if (e.getKeyCode() == KeyEvent.VK_J) {
+				else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
 					kenPlayer.setSpeed(-SPEED);
 					kenPlayer.move();
 					//repaint();
 				}
-				else if (e.getKeyCode() == KeyEvent.VK_L) {
+				else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
 					kenPlayer.setSpeed(SPEED);
 					kenPlayer.move();
 					//repaint();
+				}
+				else if (e.getKeyCode() == KeyEvent.VK_UP) {
+					kenPlayer.jump();
+				}
+				else if (e.getKeyCode() == KeyEvent.VK_CONTROL) {
+					kenPlayer.setCurrentMove(KICK);
+				}
+				// Ryu Punch
+				else if (e.getKeyCode() == KeyEvent.VK_SHIFT) {
+					kenPlayer.setCurrentMove(PUNCH);
 				}
 				
 				
