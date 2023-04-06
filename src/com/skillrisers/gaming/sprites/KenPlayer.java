@@ -49,21 +49,22 @@ public class KenPlayer extends Player {
 	}
 
 	private void loadKickImages() {
-		kickImages[0] = image.getSubimage(38, 1040, 73, 105);
-		kickImages[1] = image.getSubimage(123, 1039, 65, 106);
-		kickImages[2] = image.getSubimage(199, 1037, 118, 110);
-		kickImages[3] = image.getSubimage(327, 1045, 71, 99);
-		kickImages[4] = image.getSubimage(405, 1044, 70, 99);
-		kickImages[5] = image.getSubimage(480, 1047, 97, 103);
+		kickImages[0] = image.getSubimage(1692, 1563, 68, 98);
+		kickImages[1] = image.getSubimage(1770, 1563, 68, 98);
+		kickImages[2] = image.getSubimage(1838, 1563, 116, 98);
+		kickImages[3] = image.getSubimage(1838, 1563, 116, 98);
+		kickImages[4] = image.getSubimage(2035, 1563, 61, 98);
+		kickImages[5] = image.getSubimage(1692, 1563, 68, 98);
 	}
 
 	private void loadPunchImages() {
-		punchImages[0] = image.getSubimage(24, 819, 70, 106);
-		punchImages[1] = image.getSubimage(105, 816, 72, 104);
-		punchImages[2] = image.getSubimage(187, 817, 115, 103);
-		punchImages[3] = image.getSubimage(310, 819, 79, 107);
-		punchImages[4] = image.getSubimage(401, 817, 108, 105);
-		punchImages[5] = image.getSubimage(518, 816, 76, 105);
+		punchImages[0] = image.getSubimage(1588, 1146, 76, 98);
+		punchImages[1] = image.getSubimage(1666, 1146, 110, 98);
+		// punchImages[2] = image.getSubimage(1666, 1146, 110, 98);
+		punchImages[2] = image.getSubimage(1785, 1146, 76, 98);
+		punchImages[3] = image.getSubimage(1865, 1146, 66, 98);
+		punchImages[4] = image.getSubimage(1932, 1146, 97, 98);
+		punchImages[5] = image.getSubimage(2028, 1146, 68, 98);
 	}
 
 	private BufferedImage printWalk() {
