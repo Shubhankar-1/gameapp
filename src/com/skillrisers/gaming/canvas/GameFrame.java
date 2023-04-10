@@ -21,7 +21,6 @@ public class GameFrame extends JFrame implements GameConstants {
 	}
 
 	public static void main(String[] args) {
-
 		try {
 			GameFrame obj = new GameFrame();
 		} catch (IOException e) {
