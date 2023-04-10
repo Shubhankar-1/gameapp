@@ -1,7 +1,7 @@
 package com.skillrisers.gaming.utils;
 
 public interface GameConstants {
-	
+
 	int GHEIGHT = 900; // public static final int GHEIGHT = 900;
 	int GWIDTH = 1400;
 	String TITLE = "Street Fighter Game";
@@ -14,5 +14,6 @@ public interface GameConstants {
 	int PUNCH = 3;
 	int GRAVITY = 1;
 	int GAME_LOOP = 60;
-
+	int DAMAGE = 5;
+	int MAX_HEALTH = 500;
 }

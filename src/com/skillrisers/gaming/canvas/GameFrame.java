@@ -6,8 +6,6 @@ import javax.swing.JFrame;
 
 import com.skillrisers.gaming.utils.GameConstants;
 
-// import com.skillrisers.gaming.utils.*;
-
 public class GameFrame extends JFrame implements GameConstants {
 
 	public GameFrame() throws IOException {

@@ -5,10 +5,11 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-public class KenPlayer extends Player {
+public class KenPlayer extends Sprite {
 	private BufferedImage walkImages[] = new BufferedImage[6];
 	private BufferedImage kickImages[] = new BufferedImage[6];
 	private BufferedImage punchImages[] = new BufferedImage[6];
+	BufferedImage damageEffectImages[] = new BufferedImage[5];
 
 	public KenPlayer() throws IOException {
 		x = GWIDTH - 400;
@@ -20,6 +21,26 @@ public class KenPlayer extends Player {
 		loadWalkImages();
 		loadKickImages();
 		loadPunchImages();
+		loadDamageEffect();
+	}
+
+	public void loadDamageEffect() {
+		damageEffectImages[0] = image.getSubimage(1365, 3276, 65, 95);
+		damageEffectImages[1] = image.getSubimage(1437, 3271, 88, 99);
+		damageEffectImages[2] = image.getSubimage(1537, 3278, 75, 91);
+		damageEffectImages[3] = image.getSubimage(1627, 3277, 70, 92);
+		damageEffectImages[4] = image.getSubimage(1712, 3274, 63, 98);
+	}
+
+	public BufferedImage printDamageImage() {
+		if (imageIndex > damageEffectImages.length - 1) {
+			imageIndex = 0;
+			currentMove = WALK;
+		}
+		BufferedImage img = damageEffectImages[imageIndex];
+		imageIndex++;
+		return img;
+
 	}
 
 	public void jump() {
@@ -80,7 +101,9 @@ public class KenPlayer extends Player {
 		if (imageIndex > 5) {
 			imageIndex = 0;
 			currentMove = WALK;
+			isAttacking = false;
 		}
+		isAttacking = true;
 		BufferedImage img = kickImages[imageIndex];
 		imageIndex++; // Change Image Frames
 		return img;
@@ -90,7 +113,9 @@ public class KenPlayer extends Player {
 		if (imageIndex > 5) {
 			imageIndex = 0;
 			currentMove = WALK;
+			isAttacking = false;
 		}
+		isAttacking = true;
 		BufferedImage img = punchImages[imageIndex];
 		imageIndex++; // Change Image Frames
 		return img;

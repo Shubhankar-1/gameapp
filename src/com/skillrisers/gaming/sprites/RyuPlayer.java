@@ -8,7 +8,7 @@ import javax.imageio.ImageIO;
 
 import com.skillrisers.gaming.utils.GameConstants;
 
-public class RyuPlayer extends Player {
+public class RyuPlayer extends Sprite {
 	private BufferedImage walkImages[] = new BufferedImage[6];
 	private BufferedImage kickImages[] = new BufferedImage[6];
 	private BufferedImage punchImages[] = new BufferedImage[6];
